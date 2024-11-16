@@ -117,7 +117,8 @@ kubectl create secret docker-registry dockerhubcred \
 --docker-server=https://index.docker.io/v1/ \
 --docker-username=mmreddy424 \
 --docker-password=Docker@123 \
---docker-email=techworldwithmurali@gmail.com
+--docker-email=techworldwithmurali@gmail.com \
+--namespace dev
 ```
 ```xml
   imagePullSecrets:
