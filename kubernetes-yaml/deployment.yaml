@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
       - name: microservice-one
-        image: mmreddy424/microservice-one:latest
+        image: mmreddy424/microservice-one:__TAG__
