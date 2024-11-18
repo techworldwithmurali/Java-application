@@ -113,8 +113,6 @@ aws eks update-kubeconfig --name dev-cluster --region us-east-1
 ```xml
 cd kubernetes
 kubectl apply -f .
-
-kubectl set image deployment/web-application web-application=mmreddy424/web-application:latest
 ```
 ### Step 14:Verify whether pods are running or not
 ```xml
@@ -127,6 +125,7 @@ kubectl create secret docker-registry dockerhubcred \
 --docker-username=mmreddy424 \
 --docker-password=Docker@123 \
 --docker-email=techworldwithmurali@gmail.com
+--namespace dev
 ```
 ```xml
 imagePullSecrets:
