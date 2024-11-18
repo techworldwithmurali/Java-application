@@ -1,23 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-app
-  labels:
-    app: web-app
+  name: microservice-one
+  namespace: dev
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: web-app
+      app: microservice-one
   template:
     metadata:
       labels:
-        app: web-app
+        app: microservice-one
     spec:
       containers:
-      - name: web-application
-        image: web-app:1
-        ports:
-        - containerPort: 8080
-      imagePullSecrets:
-      - name: dockerhubcred
+      - name: microservice-one
+        image: mmreddy424/microservice-one:latest
